@@ -1,0 +1,14 @@
+namespace = farcd
+
+country_event = {
+	id = farcd.1
+	title = "debug"
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = { 
+		start_situation = {
+			type = farc_situation_energy_pulse
+			target = owner
+		} 
+	}
+}

@@ -1,0 +1,235 @@
+# All events relating to Hans
+
+namespace = hans
+
+
+# Gateway
+country_event = {
+	id = hans.11111
+	title = primer
+	fire_only_once = yes
+	hide_window = yes
+	mean_time_to_happen = { days = 1 }
+
+	immediate = {
+		country_event = { id = hans.1 days = 240 random = 360 }
+	}
+}
+
+# Strange Pulse
+country_event = {
+	id = hans.1
+	title = hans.1.name
+	desc = hans.1.desc
+	is_triggered_only = yes
+	picture = GFX_evt_alien_ruins
+	fire_only_once = yes
+
+	option = {
+		name = hans.1.a # Investigate immediately!
+		hidden_effect = { 
+			start_situation = {
+				type = farc_situation_energy_pulse
+				target = root
+			} 
+		}
+	}
+}
+
+# Triangulating the Pulse hans.2
+situation_event = {
+	id = hans.2
+	title = hans.2.name
+	desc = hans.2.desc
+	is_triggered_only = yes
+	picture = GFX_evt_archaeology_camp
+
+	option = {
+		name = hans.2.a # Keep going!
+	}
+}
+
+# Finding the entrance .3 -- Add a second option to invest resources directly for more progress
+situation_event = {
+	id = hans.3
+	title = hans.3.name
+	desc = hans.3.desc
+	is_triggered_only = yes
+	picture = GFX_evt_discovered_hidden_door
+
+	option = {
+		name = hans.3.a # Get it open!
+	}
+}
+
+# Cracking it .4
+situation_event = {
+	id = hans.4
+	title = hans.4.name
+	desc = hans.4.desc
+	is_triggered_only = yes
+	picture = GFX_evt_synth_sabotage
+
+	option = {
+		name = hans.4.a # Success!
+	}
+}
+
+# Entering and Exploring .5
+situation_event = {
+	id = hans.5
+	title = hans.5.name
+	desc = hans.5.desc
+	is_triggered_only = yes
+	picture = GFX_evt_clones
+
+	option = {
+		name = hans.5.a # Most fascinating
+		add_resource = {
+			engineering_research = 5000
+			society_research = 1500
+		} 
+	}
+}
+
+# Discovering Hans
+situation_event = {
+	id = hans.6
+	title = hans.6.name
+	desc = hans.6.desc
+	show_sound = par_event_beholder
+	is_triggered_only = yes
+
+	picture = GFX_evt_clocks
+
+	option = {
+		name = hans.6.a
+		owner = {
+			country_event = { id = hans.7 days = 1 }
+		}
+	}
+
+	after = {
+		destroy_situation = this
+	}
+}
+
+country_event = { # Hans Leader Recruitment Event
+	id = hans.7
+	title = "hans.7.name"
+	desc = "hans.7.desc"
+	show_sound = par_event_beholder
+	is_triggered_only = yes
+
+	picture = GFX_leader_recruitment_bg_renowned
+
+	event_window_type = leader_recruit
+
+	immediate = {
+		ethic_leader_creator = {
+			SPECIES_CLASS = random_non_machine
+			LEADER_PORTRAIT = facility_01 # Hans' depresso portrait
+			CLASS = scientist
+			NAME = NAME_hans
+			LEVEL = 4
+			GENDER = indeterminable
+			IMMORTAL = no
+			ETHIC = authoritarian
+			DESC = hans_leader_desc
+			CATCH_PHRASE = hans_leader_catch_phrase
+		}
+		last_created_leader = {
+			add_trait = subclass_scientist_councilor
+			add_trait = leader_trait_xeno_cataloger
+			add_trait = leader_trait_carefree_2
+			add_trait = leader_trait_roamer_2
+			add_trait = leader_trait_paranoid_2
+			add_trait = leader_trait_expertise_archaeostudies_3
+			set_age = 22
+		}
+	}
+
+	picture_event_data = {
+		portrait = event_target:ethic_leader
+		room = ethic_spaceship_room
+	}
+
+	option = {
+		name = hans.7.a
+		response_text = hans.7.a.response
+		is_dialog_only = yes
+	}
+
+	option = {
+		name = hans.7.b
+		response_text = hans.7.b.response
+		is_dialog_only = yes
+	}
+
+	option = {
+		name = hans.7.c
+		response_text = hans.7.c.response
+		is_dialog_only = yes
+	}
+
+	option = {
+		name = hans.7.d
+		response_text = hans.7.d.response
+		is_dialog_only = yes
+	}
+
+	option = {
+		name = hans.7.e
+		response_text = hans.7.e.response
+		is_dialog_only = yes
+	}
+
+	option = {
+		name = hans.7.dismiss
+		tag = dismiss_leader
+		custom_tooltip = hans.7.dismiss.tooltip
+		hidden_effect = {
+			country_event = { id = hans.8 days = 60 }
+		}
+	}
+
+	option = {
+		name = hans.7.hire
+		tag = hire_leader
+		custom_tooltip = hans.7.hire.tooltip	
+		hidden_effect = {
+		 ethic_leader_hire_effect = {
+			GLOBAL_EVENT_TARGET = renowned_authoritarian2}
+		 #country_event = { id = hans.3 days = 1 }	
+		 #country_event = { id = admin.1 days = 2 random = 2 }
+		}
+		
+	}
+}
+
+# Fate of Hans if dismissed
+country_event = {
+	id = hans.8
+	title = hans.8.name
+	desc = hans.8.desc
+	is_triggered_only = yes
+	max_global_once = yes
+
+	picture = GFX_evt_alien_segregation
+
+	option = { # leave him be
+		name = hans.8.a
+		add_resource = {
+			unity = 1000
+			energy = 1000
+		}
+	}
+
+	option = { # Exploit Hans
+		name = hans.8.b
+		add_resource = {
+			society_research = 15000
+			influence = 50
+		}
+	}
+}

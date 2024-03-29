@@ -1,0 +1,69 @@
+﻿l_english:
+
+ hans.7.name:0 "Hans"
+ hans.7.desc:0 "§HA deshivelled man looks at us with both a sense of anger, and depression. Just from the look in his eyes, we can be decirn quite a bit on his mental state, and his paranoia towards us.§!\n\n What do you fucking want? Why did you come here and awake me from my 'slumber'? What makes you think you can just crack open the facility I was living in and explore as you think? You think you can just open whatever the fuck you want [Root.GetSpeciesNamePlural]?"
+ NAME_hans:0 "Hans"
+ hans_leader_desc:0 "A ruined man filled with anger and frustration, longing for times passed long ago"
+ # hans_leader_desc:0 ""
+
+ hans.7.a:0 "Who are you?"
+ hans.7.a.response:0 "My name... it's Hans. Just Hans. No fancy fucking title like so many others, just Hans..."
+
+ hans.7.b:0 "Why were you here?"
+ hans.7.b.response:0 "§HHis face turns angrier and he clenches a fist at us.§!\n\nWell, look at nosy over here. What's it to you? I don't need to fucking explain my whole life to you [Root.GetSpeciesNamePlural]. All you need to know is I was here, and now you've broken into my home."
+
+ hans.7.c:0 "What are you good at?"
+ hans.7.c.response:0 "§HHans' expressions change to a calmer one as we ask.§!\n\nGetting people to leave me the fuck alone, or so I was. Beyond that, robotics, AI, exploring, xenosciences, catalouging, yada yada yada. Oh and I'm good at lying, but don't tell anyone I said that."
+
+ hans.7.d:0 "Would you like to come work with us?"
+ hans.7.d.response:0 "§HHans' face turns to one of shock as he's caught off-guard by our question.§!\n\nWhat? Are you serious [Root.GetSpeciesNamePlural]? Why the fuck would I- Fine. I guess I would, be warned though; I'll only work for you for as long as I am pleased by your 'empire', got it?"
+
+ hans.7.e:0 "How long have you been here?"
+ hans.7.e.response:0 "Too long some might say. Assuming you saw the armoury, you'll have an idea. Ideally, I will remain here. Lest you can convince me that working for you and your empire... and maintain it. If you can't, well...\n\n§HHans gives us a glare§!\n\nDon't let that happen."
+
+ hans.7.dismiss:0 "Goodbye"
+ hans.7.dismiss.tooltip:0 "Will fire the event 'Fate of Hans' in 60 days"
+ hans.7.hire:0 "Join us"
+ hans.7.hire.tooltip:0 "§HHans§! will join our empire as a leader"
+ hans_leader_catch_phrase:0 "Fine, I guess I can work for your empire."
+
+ hans.8.name:0 "Fate of Hans"
+ hans.8.desc:0 "It has been some time since we have met the xeno known as 'Hans' and decided to say goodbye as they so wished. Now though we must decide his fate within our empire. Be it leaving him alone as he wished, or possibly exploiting them and studying their unique xenobiology"
+ hans.8.a:0 "Leave them be"
+ hans.8.b:0 "Exploit them"
+
+ farc_situation_energy_pulse:0 "Energy Pulse"
+ farc_situation_energy_pulse_desc:0 "We have detected a pulse coming from an unspuspecting planet during our surveys. While preliminary investigation suggests nothing much, it's unusually structured nature has some suspicious as to its true meaning. As such, some in our science team have pushed for the government to investigate such an anomaly."
+
+ farc_approach_investigate_major:0 "Major investigation efforts"
+ farc_approach_investigate_minor:0 "Minor investigation efforts"
+ farc_approach_investigate_delay:0 "Delay investigation efforts"
+ farc_approach_investigate_none:0 "Pause investigation efforts"
+ energy_pulse_end:0 "We will have discovered where the pulse came from"
+
+ hans.1.name:0 "Strange Pulse"
+ hans.1.desc:0 "As we have surveyed celestial bodies within our local region, one of our science ships have detected a strange pulse. It only lasted a few seconds, but some believe it may hint at alien life."
+ hans.1.a:0 "Investigate it Immediately!"
+ 
+ hans.2.name:0 "Triangulating the Signal"
+ hans.2.desc:0 "We have triangulated the signal to an insignificant world and teams are already being deployed to the world as we speak. As we made landful, a second set of pulses were detected. Suggesting the origins came from somewhere underground."
+ hans.2.a:0 "Keep going!"
+
+ hans.3.name:0 "Finding the Entrance"
+ hans.3.desc:0 "We've managed to find an abandoned building on the surface of the planet and through it, an elevator leading towards an entrence into another building that was underground and hidden via the abandoned surface building. The entrence looks to be both electronically and mechanically locked, and may prove troublesome to crack."
+ hans.3.a:0 "Get it open!"
+ 
+ hans.4.name:0 "Cracking it"
+ hans.4.desc:0 "We've managed to crack the entrence open after applying targeted EMPs on the electronic locks and drilling through the physical locks allowing us to slide it open and access into the deeper guts of the building. Our xenobiologists have theorized this building may have been a facility for research or a black site to get rid of unwanted people, based on its heavily locked security."
+ hans.4.a:0 "Most excellent"
+
+ hans.5.name:0 "Exploring the 'Facility'"
+ hans.5.desc:0 "As we enter and explore what we once thought an abandoned facility, we have found it quite the opposite. While We haven't found any occupants as of yet, there are clear signs of activity and hints at someone living here. We've also noted the design of the 'facility' as its denizens appear to call it, where the walls have etches in them akin to a PCB. Inside these etches, conduits running power and data were discovered and at points where the etches 'end', a circle with an access point are present. Though we are unable to interface with it properly, it is by no means a primitive design. Whoever built this facility was likely a civilization more advanced than us."
+ hans.5.a:0 "Most Fascinating"
+
+ hans.6.name:0 "Discovering life"
+ hans.6.desc:0 "Exploring further into the facility, we continued to find more signs of life and activity. Be it random cups, papers, plushies, and markings on the walls, clearly someone lived here. Delving deeper and deeper we found more and more things about this place that creeped us to our bone, and confounded us. In one room there was an armoury holding weapons from ages past, with dating techniques suggesting some of these to be hundreds if not thousands of years old. In another, there was what was dubbed a 'biofabrication bay'. Whatever that means we won't konw though seeing as how none of the machines functioned. \n\nNone of that was as big as this. As we approached the final room to explore, we were stopped by someone shouting at us. Turning around, it appeared to be the main denizen of this facility. What are your orders?"
+ hans.6.a:0 "Establish communications immediately"
+
+farc_situation_energy_pulse_type:0 "Replace_me"
+farc_situation_eergy_pulse_monthly_change_tooltip:0 "monthly change"

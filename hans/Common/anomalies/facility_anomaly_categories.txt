@@ -1,0 +1,47 @@
+#facility_unusual_energy_readings = {
+#    should_ai_use = no
+#
+#	desc = "REPLACE_ME"
+#	picture = GFX_evt_ancient_databank
+#	level = 2
+#	max_once_global = yes
+#
+#	spawn_chance = {
+#		base = 5000
+#		modifier = {
+#			add = 1000
+#			is_planet_class = pc_frozen
+#			is_planet_class = pc_barren_cold
+#			is_planet_class = pc_barren
+#		} 
+#		modifier = {
+#			add = 5
+#			is_planet_class = pc_arctic
+#		}
+#	}
+#
+#	on_success = {
+#       
+#  }
+#}
+
+#facility_energy_category = {
+#	should_ai_use = no
+#	desc = "facility_energy_category_desc"
+#	picture = GFX_evt_ancient_databank
+#	level = 1
+#	max_once_global = yes
+#
+#	spawn_chance = {
+#		base = 5000
+#		modifier = {
+#			add = 3000
+#			is_planet_class = pc_barren
+#			is_planet_class = pc_barren_cold
+#			is_planet_class = pc_frozen
+#		}
+#	}
+#
+#	on_success = {
+#	}
+#}

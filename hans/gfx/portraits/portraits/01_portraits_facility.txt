@@ -1,0 +1,14 @@
+##############################################################
+###	PORTRAITS SETTINGS
+###
+### Which portraits are used is set in
+### common\species_classes\00_species_classes.txt
+###
+###	This file configures how portraits and planet backgrounds are built.
+###	Default position orientation is lower left.
+##############################################################
+
+portraits = {
+	facility_01 = { texturefile = "gfx/models/portraits/facility/hans.dds"}
+	facility_02 = { texturefile = "gfx/models/portraits/facility/Admin.dds"}
+}
