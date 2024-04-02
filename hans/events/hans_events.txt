@@ -1,6 +1,7 @@
 # All events relating to Hans
 
 namespace = hans
+namespace = admin
 
 
 # Gateway
@@ -145,7 +146,7 @@ country_event = { # Hans Leader Recruitment Event
 			add_trait = leader_trait_roamer_2
 			add_trait = leader_trait_paranoid_2
 			add_trait = leader_trait_expertise_archaeostudies_3
-			set_age = 22
+			set_age = 25
 		}
 	}
 
@@ -233,3 +234,72 @@ country_event = {
 		}
 	}
 }
+
+
+ country_event = { # Admin Leader Recruitment Event
+ 	id = admin.1
+ 	title = admin.1.name
+ 	desc = amin.1.desc
+ 	show_sound = par_event_beholder
+ 	is_triggered_only = yes
+
+ 	picture = GFX_leader_recruitment_bg_renowned
+
+ 	event_window_type = leader_recruit
+
+ 	immediate = {
+ 		ethic_leader_creator = {
+ 			SPECIES_CLASS = random_non_machine
+ 			LEADER_PORTRAIT = facility_02
+ 			CLASS = official
+ 			NAME = NAME_Admin
+ 			LEVEL = 4
+ 			GENDER = indeterminable
+ 			IMMORTAL = no
+ 			ETHIC = materialist
+ 			DESC = Admin_leader_desc
+ 			CATCH_PHRASE = Admin_leader_catch_phrase
+ 		}
+ 		last_created_leader = {
+ 			add_trait = subclass_official_economy_councilor
+ 			add_trait = leader_trait_galvanizer
+ 			add_trait = leader_trait_army_veteran_2
+ 			add_trait = leader_trait_architectural_interest_2
+ 			add_trait = leader_trait_polluter
+ 			add_trait = leader_trait_sadistic_2
+ 			set_age = 22
+ 		}
+ 	}
+ 	picture_event_data = {
+ 		portrait = event_target:ethic_leader
+ 		room = ethic_spaceship_room
+	}
+
+	option = {
+ 		name = admin.1.a
+ 		response_text = admin.1.a.response
+ 		is_dialog_only = yes
+ 	}
+
+ 	option = {
+ 		name = admin.1.b
+ 		response_text = admin.1.b.response
+ 		is_dialog_only = yes
+ 	}
+
+	option = {
+ 		name = admin.1.dismiss
+ 		tag = dismiss_leader
+ 	}
+
+ 	option = {
+ 		name = admin.1.hire
+ 		tag = hire_leader
+ 		custom_tooltip = admin.1.hire.tooltip
+ 		hidden_effect = {
+ 			ethic_leader_hire_effect = {
+ 			   GLOBAL_EVENT_TARGET = renowned_materialist2
+ 			}
+ 		}
+ 	}
+ }
