@@ -1,4 +1,4 @@
-# All events relating to Hans
+# All events relating to Hans and Admin
 
 namespace = hans
 namespace = admin
@@ -86,10 +86,12 @@ situation_event = {
 
 	option = {
 		name = hans.5.a # Most fascinating
-		add_resource = {
-			engineering_research = 5000
-			society_research = 1500
-		} 
+			owner = {
+				add_resource = {
+					engineering_research = 5000
+					society_research = 1500
+				} 
+			}
 	}
 }
 
@@ -201,8 +203,8 @@ country_event = { # Hans Leader Recruitment Event
 		hidden_effect = {
 		 ethic_leader_hire_effect = {
 			GLOBAL_EVENT_TARGET = renowned_authoritarian2}
-		 #country_event = { id = hans.3 days = 1 }	
-		 #country_event = { id = admin.1 days = 2 random = 2 }
+		 #country_event = { id = hans.9 days = 5 random = 10 }	
+		 #country_event = { id = admin.1 days = 60 random = 480 }
 		}
 		
 	}
@@ -214,7 +216,7 @@ country_event = {
 	title = hans.8.name
 	desc = hans.8.desc
 	is_triggered_only = yes
-	max_global_once = yes
+	fire_only_once = yes
 
 	picture = GFX_evt_alien_segregation
 
@@ -235,71 +237,91 @@ country_event = {
 	}
 }
 
+# Start the Hans' opinion and influence situations
+# country_event = {
+# 	id = hans.9
+# 	title = hans.9.name
+# 	desc = hans.9.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_evt_mercenary_enclave
+# 	fire_only_once = yes
 
- country_event = { # Admin Leader Recruitment Event
- 	id = admin.1
- 	title = admin.1.name
- 	desc = amin.1.desc
- 	show_sound = par_event_beholder
- 	is_triggered_only = yes
+# 	option = {
+# 		name = hans.9.a # Keep an eye on him
+# 		hidden_effect = { 
+# 			start_situation = {
+# 				type = farc_situation_hans_opinion
+# 				target = root
+# 			} 
+# 		}
+# 	}
+# }
 
- 	picture = GFX_leader_recruitment_bg_renowned
 
- 	event_window_type = leader_recruit
+#  country_event = { # Admin Leader Recruitment Event
+#  	id = admin.1
+#  	title = admin.1.name
+#  	desc = amin.1.desc
+#  	show_sound = par_event_beholder
+#  	is_triggered_only = yes
 
- 	immediate = {
- 		ethic_leader_creator = {
- 			SPECIES_CLASS = random_non_machine
- 			LEADER_PORTRAIT = facility_02
- 			CLASS = official
- 			NAME = NAME_Admin
- 			LEVEL = 4
- 			GENDER = indeterminable
- 			IMMORTAL = no
- 			ETHIC = materialist
- 			DESC = Admin_leader_desc
- 			CATCH_PHRASE = Admin_leader_catch_phrase
- 		}
- 		last_created_leader = {
- 			add_trait = subclass_official_economy_councilor
- 			add_trait = leader_trait_galvanizer
- 			add_trait = leader_trait_army_veteran_2
- 			add_trait = leader_trait_architectural_interest_2
- 			add_trait = leader_trait_polluter
- 			add_trait = leader_trait_sadistic_2
- 			set_age = 22
- 		}
- 	}
- 	picture_event_data = {
- 		portrait = event_target:ethic_leader
- 		room = ethic_spaceship_room
-	}
+#  	picture = GFX_leader_recruitment_bg_renowned
 
-	option = {
- 		name = admin.1.a
- 		response_text = admin.1.a.response
- 		is_dialog_only = yes
- 	}
+#  	event_window_type = leader_recruit
 
- 	option = {
- 		name = admin.1.b
- 		response_text = admin.1.b.response
- 		is_dialog_only = yes
- 	}
+#  	immediate = {
+#  		ethic_leader_creator = {
+#  			SPECIES_CLASS = random_non_machine
+#  			LEADER_PORTRAIT = facility_02
+#  			CLASS = official
+#  			NAME = NAME_Admin
+#  			LEVEL = 4
+#  			GENDER = indeterminable
+#  			IMMORTAL = no
+#  			ETHIC = materialist
+#  			DESC = Admin_leader_desc
+#  			CATCH_PHRASE = Admin_leader_catch_phrase
+#  		}
+#  		last_created_leader = {
+#  			add_trait = subclass_official_economy_councilor
+#  			add_trait = leader_trait_galvanizer
+#  			add_trait = leader_trait_army_veteran_2
+#  			add_trait = leader_trait_architectural_interest_2
+#  			add_trait = leader_trait_polluter
+#  			add_trait = leader_trait_sadistic_2
+#  			set_age = 22
+#  		}
+#  	}
+#  	picture_event_data = {
+#  		portrait = event_target:ethic_leader
+#  		room = ethic_spaceship_room
+# 	}
 
-	option = {
- 		name = admin.1.dismiss
- 		tag = dismiss_leader
- 	}
+# 	option = {
+#  		name = admin.1.a
+#  		response_text = admin.1.a.response
+#  		is_dialog_only = yes
+#  	}
 
- 	option = {
- 		name = admin.1.hire
- 		tag = hire_leader
- 		custom_tooltip = admin.1.hire.tooltip
- 		hidden_effect = {
- 			ethic_leader_hire_effect = {
- 			   GLOBAL_EVENT_TARGET = renowned_materialist2
- 			}
- 		}
- 	}
- }
+#  	option = {
+#  		name = admin.1.b
+#  		response_text = admin.1.b.response
+#  		is_dialog_only = yes
+#  	}
+
+# 	option = {
+#  		name = admin.1.dismiss
+#  		tag = dismiss_leader
+#  	}
+
+#  	option = {
+#  		name = admin.1.hire
+#  		tag = hire_leader
+#  		custom_tooltip = admin.1.hire.tooltip
+#  		hidden_effect = {
+#  			ethic_leader_hire_effect = {
+#  			   GLOBAL_EVENT_TARGET = renowned_materialist2
+#  			}
+#  		}
+#  	}
+#  }

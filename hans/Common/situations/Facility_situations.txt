@@ -31,10 +31,12 @@ farc_situation_energy_pulse = {
 		icon_background = GFX_situation_approach_bg_yellow
 		default = yes
 		on_select = {
-			#custom_tooltip = approach_outcome_tooltip
+			custom_tooltip = approach_outcome_tooltip
 		}
 		modifier = {
 			country_base_influence_produces_add = -0.05
+			country_energy_produces_mult = -0.02
+			country_unity_produces_mult = -0.05
 		}
 		resources = { 
 			category = situations
@@ -52,21 +54,21 @@ farc_situation_energy_pulse = {
 		icon = GFX_situation_approach_fleet
 		icon_background = GFX_situation_approach_bg_yellow
 		on_select = {
-			#custom_tooltip = approach_outcome_tooltip 
+			custom_tooltip = approach_outcome_tooltip 
 		}
 		modifier = {
 			country_base_influence_produces_add = -0.5
+			country_energy_produces_mult = -0.25
+			country_society_research_produces_mult = -0.05
+			country_unity_produces_mult = -0.1
 		}
 		resources = {
 			category = situations
 			upkeep = {
-				energy = 75
+				energy = 35
 			}
 			upkeep = {
-				unity = 45
-			}
-			upkeep = {
-				society_research = 15
+				unity = 10
 			}
 		}
 	}
@@ -110,7 +112,7 @@ farc_situation_energy_pulse = {
 
 	stages = {
 		stage_2 = { # Finding the entrance to Facility
-			icon = GFX_situation_stage_1
+			icon = GFX_situation_stage_2
 			icon_background = GFX_situation_stage_frame_blue
 			end = 220 # 50
 			on_first_enter = {
@@ -122,7 +124,7 @@ farc_situation_energy_pulse = {
 
 	stages = {
 		stage_3 = { # Cracking it
-			icon = GFX_situation_stage_1
+			icon = GFX_situation_stage_3
 			icon_background = GFX_situation_stage_frame_blue
 			end = 240 # 80
 			on_first_enter = {
@@ -134,7 +136,7 @@ farc_situation_energy_pulse = {
 
 	stages = {
 		stage_4 = { # Entering and exploring it
-			icon = GFX_situation_stage_1
+			icon = GFX_situation_stage_4
 			icon_background = GFX_situation_stage_frame_blue
 			end = 320 # 120
 			on_first_enter = {
@@ -146,7 +148,7 @@ farc_situation_energy_pulse = {
 
 	stages = {
 		stage_5 = {
-			icon = GFX_situation_stage_1
+			icon = GFX_situation_stage_5
 			icon_background = GFX_situation_stage_frame_blue
 			end = 400 # 150
 			on_first_enter = {
@@ -165,28 +167,47 @@ farc_situation_energy_pulse = {
 }
 
 # farc_situation_hans_opinion = {
-# 	picture = GFX_evt_space_station
-# 	start_value = 50
-# 	progress_direction = bidirectional
-# 	complete_icon_frame = GFX_situation_outcome_frame_blue
-# 	complete_icon = GFX_situation_outcome_unknown
-# 	fail_icon_frame = GFX_situation_outcome_frame_blue
-# 	fail_icon = GFX_situation_outcome_unknown
+#  	picture = GFX_evt_space_station
+#  	start_value = 50
+#  	progress_direction = bidirectional
+#  	complete_icon_frame = GFX_situation_outcome_frame_blue
+#  	complete_icon = GFX_situation_outcome_unknown
+#  	fail_icon_frame = GFX_situation_outcome_frame_red
+#  	fail_icon = GFX_situation_outcome_unknown
 	
-# 	approach = {
-# 		name = approach_observe
-# 		icon = GFX_situation_approach_amenities
-# 		icon_background = GFX_situation_approach_bg_yellow
-# 		on_select = {
-# 			custom_tooltip = approach_outcome_tooltip
-# 		}
+#  	approach = {
+#  		name = farc_approach_observe
+#  		icon = GFX_situation_approach_amenities
+#  		icon_background = GFX_situation_approach_bg_yellow
+#  		on_select = {
+#  			custom_tooltip = approach_outcome_tooltip
+#  		}
+# 		default = yes
+#  	}
+
+# 	stages = {
+# 	stage_2_alt = {
+# 	icon = GFX_situation_stage_1
+# 	icon_background = GFX_situation_stage_frame_red
+# 	end = 40	
+# 	}	
+# 	stage_1 = { # centre
+# 	icon = GFX_situation_stage_1
+# 	icon_background = GFX_situation_stage_frame_blue
+# 	end = 60
 # 	}
+# 	stage_2_alt = { # left
+# 		icon = GFX_situation_stage_1
+# 		icon_background = GFX_situation_stage_frame_green
+# 		end = 100
+# 	}
+# }
 # }
 
 # farc_situation_hans_influence = {
 # 	picture = GFX_evt_space_station
-# 	start_value = 50
-# 	progress_direction = bidirectional
+# 	start_value = 10
+# 	progress_direction = monodirectional
 # 	complete_icon_frame = GFX_situation_outcome_frame_blue
 # 	complete_icon = GFX_situation_outcome_unknown
 # 	fail_icon_frame = GFX_situation_outcome_frame_blue
