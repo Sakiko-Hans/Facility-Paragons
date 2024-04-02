@@ -11,4 +11,5 @@
 portraits = {
 	facility_01 = { texturefile = "gfx/models/portraits/facility/hans.dds"}
 	facility_02 = { texturefile = "gfx/models/portraits/facility/Admin.dds"}
+	facility_03 = { texturefile = "gfx/models/portraits/facility/heisenberg.dds"}
 }
