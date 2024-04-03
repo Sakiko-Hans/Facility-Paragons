@@ -203,7 +203,7 @@ country_event = { # Hans Leader Recruitment Event
 		hidden_effect = {
 		 ethic_leader_hire_effect = {
 			GLOBAL_EVENT_TARGET = renowned_authoritarian2}
-		 #country_event = { id = hans.9 days = 5 random = 10 }	
+		 country_event = { id = hans.9 days = 60 random = 90 }	
 		 #country_event = { id = admin.1 days = 60 random = 480 }
 		}
 		
@@ -238,24 +238,28 @@ country_event = {
 }
 
 # Start the Hans' opinion and influence situations
-# country_event = {
-# 	id = hans.9
-# 	title = hans.9.name
-# 	desc = hans.9.desc
-# 	is_triggered_only = yes
-# 	picture = GFX_evt_mercenary_enclave
-# 	fire_only_once = yes
-
-# 	option = {
-# 		name = hans.9.a # Keep an eye on him
-# 		hidden_effect = { 
-# 			start_situation = {
-# 				type = farc_situation_hans_opinion
-# 				target = root
-# 			} 
-# 		}
-# 	}
-# }
+ country_event = {
+ 	id = hans.9
+ 	title = hans.9.name
+ 	desc = hans.9.desc # Describes Hans cementing himself into your empire
+ 	is_triggered_only = yes
+ 	picture = GFX_evt_mercenary_enclave
+ 	fire_only_once = yes
+ 	option = {
+ 		name = hans.9.a # Keep an eye on him
+		custom_tooltip = hans.9.tooltip
+ 		hidden_effect = { 
+ 			start_situation = {
+ 				type = farc_situation_hans_opinion
+ 				target = root
+ 			}
+			start_situation = {
+				type = farc_situation_hans_influence
+				target = root
+			} 
+ 		}
+ 	}
+ }
 
 
 #  country_event = { # Admin Leader Recruitment Event

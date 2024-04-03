@@ -1,36 +1,7 @@
 ﻿l_english:
 
- hans.7.name:0 "Hans"
- hans.7.desc:0 "§HA deshivelled man looks at us with both a sense of anger, and depression. Just from the look in his eyes, we're able to discern quite a bit on his mental state, and his paranoia towards us.§!\n\n What do you fucking want? Why did you come here and disturb me from my 'slumber'? What makes you think you can just crack open the facility I was living in and explore as you think? You think you can just open whatever the fuck you want [Root.GetSpeciesNamePlural]? Explore to your hearts' content and not even bother to knock or see if anyone lived here? Well, no, you can't."
- NAME_hans:0 "Hans"
- hans_leader_desc:0 "A ruined man filled with anger and frustration, longing for times passed long ago"
-
- hans.7.a:0 "Who are you?"
- hans.7.a.response:0 "My name...\n\n§HThe man pauses for a moment§!\n\nIt's Hans. Just Hans. No fancy fuckin' title like so many others, just Hans..."
-
- hans.7.b:0 "Why were you here?"
- hans.7.b.response:0 "§HHis face turns angrier and he clenches a fist at us.§!\n\nWell, look at nosy over here. What's it to you? I don't need to fucking explain my whole life to you [Root.GetSpeciesNamePlural].\n\n§HHis face grows calmer and he relaxes his fist as he takes a few deep breaths in§!\n\nLook, all you need to know is I was here, and now you've broken into my home, [Root.GetSpeciesNamePlural]. Anything else is irrelevant to the conversation we are having at hand."
-
- hans.7.c:0 "What are you good at?"
- hans.7.c.response:0 "§HHans' expressions and demeanors change to a calmer one as we ask.§!\n\nGetting people to leave me the fuck alone, or so I was. Beyond that, robotics, AI, exploring, xenosciences, catalouging, yada yada yada. Oh and I'm good at lying, but don't tell anyone I said that.\n\n§HHans snickers at his lying comment and grins a bit at us.§!"
-
- hans.7.e:0 "Would you like to come work with us?"
- hans.7.e.response:0 "§HHans' face turns to one of shock as he's caught off-guard by our question.§!\n\nWhat? Are you serious [Root.GetSpeciesNamePlural]? Why the fuck would I- Fine. I guess I would, be warned though; I'll only work for you for as long as I am pleased by your 'empire', got it?"
-
- hans.7.d:0 "How long have you been here?"
- hans.7.d.response:0 "Too long some might say. Assuming you saw the armoury, you'll have an idea. Ideally, I will remain here. Lest you can convince me that working for you and your empire... and maintain it. If you can't, well...\n\n§HHans gives us a glare§!\n\nDon't let that happen and we'll be fine."
-
- hans.7.dismiss:0 "Goodbye"
- hans.7.dismiss.tooltip:0 "Will fire the event 'Fate of Hans' in 60 days"
- hans.7.hire:0 "Join us"
- hans.7.hire.tooltip:0 "§HHans§! will join our empire as a leader"
- hans_leader_catch_phrase:0 "Fine, I guess I can work for your empire."
-
- hans.8.name:0 "Fate of Hans"
- hans.8.desc:0 "It has been some time since we have met the xeno known as 'Hans' and decided to say goodbye as they so wished. Now though we must decide his fate within our empire. Be it leaving him alone as he wished, or possibly exploiting them and studying their unique xenobiology"
- hans.8.a:0 "Leave them be"
- hans.8.b:0 "Exploit them"
-
+ farc_situation_energy_pulse_type:0 "Replace_me"
+ farc_situation_eergy_pulse_monthly_change_tooltip:0 "monthly change"
  farc_situation_energy_pulse:0 "Anomalous Signal Pulses"
  farc_situation_energy_pulse_desc:0 "We have detected a pulse coming from an unspuspecting planet during our surveys. While preliminary investigations suggests nothing major, its structured nature has a large portion in our science division suspicious. As such, some scientists in our science divisions have pushed for the government to investigate the anomalous signal pulses."
 
@@ -67,5 +38,43 @@
  hans.6.desc:0 "Exploring further into the facility, we continued to find more signs of life and activity. Be it random cups, papers, plushies, records in terminals, and markings on the walls; clearly someone lived here. Delving deeper, we found more things about this place that creeped us to our bone, and confounded us. In one room there was an armoury holding weapons from ages past, with dating techniques suggesting some of these to be hundreds if not thousands of years old. In another, there was what was dubbed a 'biofabrication bay'. Whatever that means we won't konw though seeing as how none of the machines functioned. In yet another room, we found what appear to be couches, a table, and a 'primtive' TV, along with a large petbed. We also found what we believe to be a server room after following a flight of stairs donw into it, but none of the servers seem to function and attempts to interface with them went... poorly. \n\nHowever, none of that was as big as this. As we walked back up the stairs from the server room and approached the final room to explore, we were stopped by a xeno shouting at us. Turning around, our team was confronted by a deshevilled looking man, with purple hair, eyes, and formal attire. They do not look to be too pleased with us, and contact is inevitable."
  hans.6.a:0 "Initiate first contact procedures"
 
-farc_situation_energy_pulse_type:0 "Replace_me"
-farc_situation_eergy_pulse_monthly_change_tooltip:0 "monthly change"
+ hans.7.name:0 "Hans"
+ hans.7.desc:0 "§HA deshivelled man looks at us with both a sense of anger, and depression. Just from the look in his eyes, we're able to discern quite a bit on his mental state, and his paranoia towards us.§!\n\n What do you fucking want? Why did you come here and disturb me from my 'slumber'? What makes you think you can just crack open the facility I was living in and explore as you think? You think you can just open whatever the fuck you want [Root.GetSpeciesNamePlural]? Explore to your hearts' content and not even bother to knock or see if anyone lived here? Well, no, you can't."
+ NAME_hans:0 "Hans"
+ hans_leader_desc:0 "A ruined man filled with anger and frustration, longing for times passed long ago"
+
+ hans.7.a:0 "Who are you?"
+ hans.7.a.response:0 "My name...\n\n§HThe man pauses for a moment§!\n\nIt's Hans. Just Hans. No fancy fuckin' title like so many others, just Hans..."
+
+ hans.7.b:0 "Why were you here?"
+ hans.7.b.response:0 "§HHis face turns angrier and he clenches a fist at us.§!\n\nWell, look at nosy over here. What's it to you? I don't need to fucking explain my whole life to you [Root.GetSpeciesNamePlural].\n\n§HHis face grows calmer and he relaxes his fist as he takes a few deep breaths in§!\n\nLook, all you need to know is I was here, and now you've broken into my home, [Root.GetSpeciesNamePlural]. Anything else is irrelevant to the conversation we are having at hand."
+
+ hans.7.c:0 "What are you good at?"
+ hans.7.c.response:0 "§HHans' expressions and demeanors change to a calmer one as we ask.§!\n\nGetting people to leave me the fuck alone, or so I was. Beyond that, robotics, AI, exploring, xenosciences, catalouging, yada yada yada. Oh and I'm good at lying, but don't tell anyone I said that.\n\n§HHans snickers at his lying comment and grins a bit at us.§!"
+
+ hans.7.e:0 "Would you like to come work with us?"
+ hans.7.e.response:0 "§HHans' face turns to one of shock as he's caught off-guard by our question.§!\n\nWhat? Are you serious [Root.GetSpeciesNamePlural]? Why the fuck would I- Fine. I guess I would, be warned though; I'll only work for you for as long as I am pleased by your 'empire', got it?"
+
+ hans.7.d:0 "How long have you been here?"
+ hans.7.d.response:0 "Too long some might say. Assuming you saw the armoury, you'll have an idea. Ideally, I will remain here. Lest you can convince me that working for you and your empire... and maintain it. If you can't, well...\n\n§HHans gives us a glare§!\n\nDon't let that happen and we'll be fine."
+
+ hans.7.dismiss:0 "Goodbye"
+ hans.7.dismiss.tooltip:0 "Will fire the event 'Fate of Hans' in 60 days"
+ hans.7.hire:0 "Join us"
+ hans.7.hire.tooltip:0 "§HHans§! will join our empire as a leader"
+ hans_leader_catch_phrase:0 "Fine, I guess I can work for your empire."
+
+ hans.8.name:0 "Fate of Hans"
+ hans.8.desc:0 "It has been some time since we have met the xeno known as 'Hans' and decided to say goodbye as they so wished. Now though we must decide his fate within our empire. Be it leaving him alone as he wished, or possibly exploiting them and studying their unique xenobiology"
+ hans.8.a:0 "Leave them be"
+ hans.8.b:0 "Exploit them"
+ 
+ hans.9.name:0 "Cementing of Hans"
+ hans.9.desc:0 "It has been a few months since we encountered and recruited the xeno known as Hans, and in that time they've taken time to test the limits of our empire and establish boundries between us and him. While seemingly content with us for now, he has voiced his advocacy for a weak military and strong technological basis. Concerningly, it would appear as though Hans is also trying to curry favours and influence with those around him."
+ hans.9.a:0 "Keep an eye on them"
+ hans.9.tooltip:0 "Fire the Situations Hans' influence and Hans' opinion"
+
+ farc_situation_hans_opinion:0 "Hans' opinion"
+ farc_situation_hans_opinion_desc:0 "Though Hans has agreed to join us, it was done so reluctantly. Unlike many of our other leaders, Hans is not that enthusiastic to work for us and have us a stern warning not to let Hans' opinion of us drop too low. While many in the upper echelons of our government were not impressed, we should be wary nonetheless."
+ farc_situation_hans_influence:0 "Hans' influence"
+ farc_situation_hans_influence_desc:0 "As Hans works within our empire, he, like many others, seek to spread their influence far and wide. While for most leaders, this isn't normally a concern, Hans' currying of favours from peers early on has some upper echelons worried and they seek to limit it. Though we should seek to limit it, Hans' influence within our state could prove to be a boon should we manage to get him to like us, but it could also end terribly should he start to hate us, or worse, leaves."
