@@ -166,50 +166,129 @@ farc_situation_energy_pulse = {
 
 }
 
-# farc_situation_hans_opinion = {
-#  	picture = GFX_evt_space_station
-#  	start_value = 50
-#  	progress_direction = bidirectional
-#  	complete_icon_frame = GFX_situation_outcome_frame_blue
-#  	complete_icon = GFX_situation_outcome_unknown
-#  	fail_icon_frame = GFX_situation_outcome_frame_red
-#  	fail_icon = GFX_situation_outcome_unknown
+farc_situation_hans_opinion = {
+  	picture = GFX_evt_friendly_enlightenment
+  	start_value = 90
+  	progress_direction = bidirectional
+  	complete_icon_frame = GFX_situation_outcome_frame_blue
+  	complete_icon = GFX_situation_outcome_unknown
+  	fail_icon_frame = GFX_situation_outcome_frame_red
+  	fail_icon = GFX_situation_outcome_unknown
 	
-#  	approach = {
-#  		name = farc_approach_observe
-#  		icon = GFX_situation_approach_amenities
-#  		icon_background = GFX_situation_approach_bg_yellow
-#  		on_select = {
-#  			custom_tooltip = approach_outcome_tooltip
-#  		}
-# 		default = yes
-#  	}
+  	approach = {
+  		name = farc_approach_observe
+  		icon = GFX_situation_approach_amenities
+  		icon_background = GFX_situation_approach_bg_yellow
+  		on_select = {
+  			custom_tooltip = approach_outcome_tooltip
+  		}
+ 		default = yes
+  	}
 
-# 	stages = {
-# 	stage_2_alt = {
-# 	icon = GFX_situation_stage_1
-# 	icon_background = GFX_situation_stage_frame_red
-# 	end = 40	
-# 	}	
-# 	stage_1 = { # centre
-# 	icon = GFX_situation_stage_1
-# 	icon_background = GFX_situation_stage_frame_blue
-# 	end = 60
-# 	}
-# 	stage_2_alt = { # left
-# 		icon = GFX_situation_stage_1
-# 		icon_background = GFX_situation_stage_frame_green
-# 		end = 100
-# 	}
-# }
-# }
+ 	stages = {
+	stage_5 = { # left - Abysmal opinion
+		icon = GFX_situation_stage_5
+		icon_background = GFX_situation_stage_frame_red
+		end = 20	
+	}	
+	stage_4 = { # left - negative opinion
+		icon = GFX_situation_stage_4
+		icon_background = GFX_situation_stage_frame_red
+		end = 40	
+	}	
+	stage_3 = { # left - discontentment
+		icon = GFX_situation_stage_3
+		icon_background = GFX_situation_stage_frame_red
+		end = 60	
+	}	
+ 	stage_2 = { # left - irritated
+ 	icon = GFX_situation_stage_2
+ 	icon_background = GFX_situation_stage_frame_red
+ 	end = 80	
+ 	}	
+ 	stage_1 = { # centre - neutral
+ 	icon = GFX_situation_stage_1
+ 	icon_background = GFX_situation_stage_frame_blue
+ 	end = 100
+ 	}
+ 	stage_2_alt = { # right - slightly positive
+ 		icon = GFX_situation_stage_2
+ 		icon_background = GFX_situation_stage_frame_green
+ 		end = 120
+ 	}
+	stage_3_alt = { # right - positive
+	 icon = GFX_situation_stage_3
+	 icon_background = GFX_situation_stage_frame_green
+	 end = 140
+ 	}
+	stage_4_alt = { # right - mostly positive
+	 icon = GFX_situation_stage_4
+	 icon_background = GFX_situation_stage_frame_green
+	 end = 160
+ 	}
+	stage_5_alt = { # right - Max opinion reached
+	 icon = GFX_situation_stage_5
+	 icon_background = GFX_situation_stage_frame_green
+	 end = 180
+ 	}
+ }
+}
 
-# farc_situation_hans_influence = {
-# 	picture = GFX_evt_space_station
-# 	start_value = 10
-# 	progress_direction = monodirectional
-# 	complete_icon_frame = GFX_situation_outcome_frame_blue
-# 	complete_icon = GFX_situation_outcome_unknown
-# 	fail_icon_frame = GFX_situation_outcome_frame_blue
-# 	fail_icon = GFX_situation_outcome_unknown
-# }
+farc_situation_hans_influence = { 
+ 	picture = GFX_evt_legendary_leader
+ 	start_value = 0
+	monthly_progress = {
+		base = 0.05
+	} 
+ 	progress_direction = monodirectional
+ 	complete_icon_frame = GFX_situation_outcome_frame_blue
+ 	complete_icon = GFX_situation_outcome_unknown
+	stages = {
+		stage_1 = { # Virtually no influence, no bonuses, no maluses
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_blue
+			end = 5
+		}
+	}
+
+	stages = {
+		stage_2 = { # Low influence, modifiers to research, agenda speed if on the council, ship build cost, ship build speed,
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_blue
+			end = 35
+		}
+	}
+
+	stages = {
+		stage_3 = { # Moderate influence
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_blue
+			end = 75
+		}
+	}
+
+	stages = {
+		stage_4 = { # High influence
+			icon = GFX_situation_stage_4
+			icon_background = GFX_situation_stage_frame_blue
+			end = 100
+		}
+	}
+
+	stages = {
+		stage_5 = { # Very high influence
+			icon = GFX_situation_stage_5
+			icon_background = GFX_situation_stage_frame_blue
+			end = 130
+		}
+	}
+
+	stages = {
+		stage_6 = { # Extreme influence, begin coup situation
+			icon = GFX_situation_stage_6
+			icon_background = GFX_situation_stage_frame_blue
+			end = 150
+		}
+	}
+
+ }
