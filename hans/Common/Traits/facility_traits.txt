@@ -1,0 +1,20 @@
+# Place all custom traits here
+
+traits = {
+  farc_herald = {
+    key = herald_trait
+    name = herald_trait
+    cost = 1
+    leader_trait = yes
+    icon = "gfx/interface/icons/traits/leader_traits/leader_trait_3.dds"
+    initial = no
+    leader_add_potential = no
+    modifier = {
+      leader_experience_gain = 0.1
+      fire_rate_multipler = 1.25
+      orbital_bombardment_damage_mult = 1.5
+      army_damage_mult = 1.25
+      army_collateral_damage_mult = 2.0
+    }
+  }
+}
