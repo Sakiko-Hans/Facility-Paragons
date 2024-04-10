@@ -5,37 +5,72 @@ namespace = admin
 
 
 # Gateway
-country_event = {
-	id = hans.11111
-	title = primer
-	fire_only_once = yes
-	hide_window = yes
-	mean_time_to_happen = { days = 1 }
+#  country_event = {
+#  	id = hans.11111
+#  	title = primer
+#  	fire_only_once = yes
+#  	hide_window = yes
+#  	mean_time_to_happen = { days = 1 }
 
-	immediate = {
-		country_event = { id = hans.1 days = 240 random = 360 }
-	}
-}
+#  	immediate = {
+#  		country_event = { id = hans.1 days = 240 random = 360 }
+#  	}
+# }
 
-# Strange Pulse
-country_event = {
+
+# Strange Pulse - On_Action version
+event = {
 	id = hans.1
 	title = hans.1.name
 	desc = hans.1.desc
 	is_triggered_only = yes
-	picture = GFX_evt_alien_ruins
+	picture = GFX_evt_alien_ruins	
 	fire_only_once = yes
+
+	trigger = {
+		owner = {
+			is_ai = no
+		}
+		NOT = { has_global_flag = farc_hans_started }
+		has_planet_flag = farc_hans_planet
+	}
+
+	immediate = {
+		set_global_flag = farc_hans_started
+	}
 
 	option = {
 		name = hans.1.a # Investigate immediately!
-		hidden_effect = { 
-			start_situation = {
-				type = farc_situation_energy_pulse
-				target = root
-			} 
+		owner = {
+			hidden_effect = {
+				start_situation = {
+					type = farc_situation_energy_pulse
+					target = root
+				}
+			}
 		}
 	}
 }
+
+# # Strange Pulse
+# country_event = {
+# 	id = hans.1
+# 	title = hans.1.name
+# 	desc = hans.1.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_evt_alien_ruins
+# 	fire_only_once = yes
+
+# 	option = {
+# 		name = hans.1.a # Investigate immediately!
+# 		hidden_effect = { 
+# 			start_situation = {
+# 				type = farc_situation_energy_pulse
+# 				target = root
+# 			} 
+# 		}
+# 	}
+# }
 
 # Triangulating the Pulse hans.2
 situation_event = {
@@ -259,6 +294,18 @@ country_event = {
 			} 
  		}
  	}
+ }
+
+ situation_event = { # Temp event for causing the coup?
+	id = hans.10
+	title = hans.10.name
+	desc = hans.10.desc
+	is_triggered_only = yes
+	picture = GFX_evt_legendary_leader
+	fire_only_once = yes
+	option = {
+		name = hans.10.a # Less than ideal... will make the nation a dictator and install Hans as ruler
+	}
  }
 
 

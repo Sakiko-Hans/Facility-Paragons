@@ -1,4 +1,4 @@
-# Prefix is FARC
+# Prefix is farc
 
 # Energy pulse, finds Hans
 farc_situation_energy_pulse = {
@@ -256,7 +256,11 @@ farc_situation_hans_influence = {
 			icon = GFX_situation_stage_2
 			icon_background = GFX_situation_stage_frame_blue
 			end = 35
+			modifier = {
+				all_technology_research_speed = 0.025
+			}
 		}
+
 	}
 
 	stages = {
@@ -264,7 +268,11 @@ farc_situation_hans_influence = {
 			icon = GFX_situation_stage_3
 			icon_background = GFX_situation_stage_frame_blue
 			end = 75
+			modifier = {
+				all_technology_research_speed = 0.05
+			}
 		}
+
 	}
 
 	stages = {
@@ -272,7 +280,11 @@ farc_situation_hans_influence = {
 			icon = GFX_situation_stage_4
 			icon_background = GFX_situation_stage_frame_blue
 			end = 100
+			modifier = {
+				all_technology_research_speed = 0.10
+			}
 		}
+
 	}
 
 	stages = {
@@ -280,7 +292,11 @@ farc_situation_hans_influence = {
 			icon = GFX_situation_stage_5
 			icon_background = GFX_situation_stage_frame_blue
 			end = 130
+			modifier = {
+				all_technology_research_speed = 0.15
+			}
 		}
+
 	}
 
 	stages = {
@@ -288,7 +304,14 @@ farc_situation_hans_influence = {
 			icon = GFX_situation_stage_6
 			icon_background = GFX_situation_stage_frame_blue
 			end = 150
+			modifier = {
+				all_technology_research_speed = 0.25
+			}
 		}
 	}
 
+	on_progress_complete = {
+		custom_tooltip = farc_influence_end
+		hidden_effect = {}
+	}
  }

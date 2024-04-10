@@ -1,0 +1,58 @@
+# Place all custom traits here
+
+# leader_trait_farc_herald = {
+# 	inline_script = {
+# 		script = trait/icon
+# 		CLASS = commander
+# 		ICON = "GFX_leader_trait_psionic"
+# 		RARITY = paragon
+# 		COUNCIL = no
+# 		TIER = none
+# 	}
+# 	fleet_modifier = {
+# 		ship_fire_rate_mult = 0.25
+# 		ship_orbital_bombardment_mult = 0.5
+# 		# mult = this.herald_void
+# 	}
+# 	army_modifier = {
+# 		army_collateral_damage_mult = 2
+# 		army_damage_mult = 0.10
+# 		# mult = this.herald_void
+# 	}
+# 	leader_class = { commander }
+# }
+
+# leader_trait_farc_hans = {
+# 	inline_script = {
+# 		script = trait/icon
+# 		CLASS = scientist
+# 		ICON = "GFX_leader_trait_archaeologist"
+# 		RARITY = paragon
+# 		COUNCIL = yes
+# 		TIER = none
+# 	}
+# 	modifier = {
+# 		science_ship_survey_speed = 0.5
+# 		ship_speed_mult = 0.50
+# 		ship_anomaly_generation_chance_mult = 0.05
+# 		ship_anomaly_research_speed_mult = 0.1
+# 		# mult = this.hans_opinion
+# 	}
+# 	councilor_modifier = {
+# 		all_technology_research_speed = 0.05
+# 		army_damage_mult = -0.10
+# 		science_ship_cost = -0.05
+# 		# mult = this.hans_opinion
+# 	}
+# 	planet_modifier = {
+# 		planet_jobs_physics_research_produces_mult = 0.1
+# 		planet_jobs_society_research_produces_mult = 0.1
+# 		planet_jobs_engineering_research_produces_mult = 0.1
+# 	}
+# 	sector_modifier = {
+# 		planet_jobs_physics_research_produces_mult = 0.05
+# 		planet_jobs_society_research_produces_mult = 0.05
+# 		planet_jobs_engineering_research_produces_mult = 0.05
+# 	}
+# 	leader_class = { scientist }
+# }

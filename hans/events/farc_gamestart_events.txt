@@ -1,0 +1,42 @@
+
+namespace = farc_gamestart
+
+event = {
+	id = farc_gamestart.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_system = {
+			limit = {
+				NOR = {
+					is_star_class = sc_black_hole
+					is_star_class = sc_neutron_star
+					is_star_class = sc_pulsar
+				}
+			}
+			every_system_planet = {
+				limit = {
+					OR = {
+						is_planet_class = pc_barren_cold
+						is_planet_class = pc_frozen
+						is_planet_class = pc_barren
+					}
+					NOR = {
+						has_deposit = d_nanites_deposit
+						has_anomaly = yes
+						has_modifier = terraforming_candidate
+					}
+					planet_size > 10
+			}
+			random_list = {
+				100 = {
+					set_planet_flag = farc_hans_planet
+				}
+				20 = {}
+			}
+			}
+		}
+	
+	}
+}
