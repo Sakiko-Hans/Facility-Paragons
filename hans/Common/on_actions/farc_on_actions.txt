@@ -1,0 +1,14 @@
+on_game_start = {
+	events = {
+		farc_gamestart.1
+	}
+}
+
+# Fires when science ship surveys a planet
+# Scope = ship
+# From = planet
+on_survey_planet = {
+	events = {
+		hans.1
+	}
+}

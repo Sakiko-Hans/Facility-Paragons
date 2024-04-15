@@ -39,7 +39,7 @@
  hans.6.a:0 "Initiate first contact procedures"
 
  hans.7.name:0 "Hans"
- hans.7.desc:0 "§HA deshivelled man looks at us with both a sense of anger, and depression. Just from the look in his eyes, we're able to discern quite a bit on his mental state, and his paranoia towards us.§!\n\n What do you fucking want? Why did you come here and disturb me from my 'slumber'? What makes you think you can just crack open the facility I was living in and explore as you think? You think you can just open whatever the fuck you want [Root.GetSpeciesNamePlural]? Explore to your hearts' content and not even bother to knock or see if anyone lived here? Well, no, you can't."
+ hans.7.desc:0 "§HA dishevelled man looks at us with both a sense of anger, and depression. Just from the look in his eyes, we're able to discern quite a bit on his mental state, and his paranoia towards us.§!\n\n What do you fucking want? Why did you come here and disturb me from my 'slumber'? What makes you think you can just crack open the facility I was living in and explore as you think? You think you can just open whatever the fuck you want [Root.GetSpeciesNamePlural]? Explore to your hearts' content and not even bother to knock or see if anyone lived here? Well, no, you can't."
  NAME_hans:0 "Hans"
  hans_leader_desc:0 "A ruined man filled with anger and frustration, longing for times passed long ago"
 
@@ -75,6 +75,6 @@
  hans.9.tooltip:0 "Fire the Situations Hans' influence and Hans' opinion"
 
  farc_situation_hans_opinion:0 "Hans' opinion"
- farc_situation_hans_opinion_desc:0 "Though Hans has agreed to join us, it was done so reluctantly. Unlike many of our other leaders, Hans is not that enthusiastic to work for us and have us a stern warning not to let Hans' opinion of us drop too low. While many in the upper echelons of our government were not impressed, we should be wary nonetheless."
+ farc_situation_hans_opinion_desc:0 "Though Hans has agreed to join us, it was done so reluctantly. Unlike many of our other leaders, Hans is not that enthusiastic to work for us and have given us a stern warning not to let Hans' opinion of us drop too low. While many in the upper echelons of our government were not impressed, we should be wary nonetheless."
  farc_situation_hans_influence:0 "Hans' influence"
  farc_situation_hans_influence_desc:0 "As Hans works within our empire, he, like many others, seek to spread their influence far and wide. While for most leaders, this isn't normally a concern, Hans' currying of favours from peers early on has some upper echelons worried and they seek to limit it. Though we should seek to limit it, Hans' influence within our state could prove to be a boon should we manage to get him to like us, but it could also end terribly should he start to hate us, or worse, leaves."

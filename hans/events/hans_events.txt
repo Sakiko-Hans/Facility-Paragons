@@ -1,4 +1,6 @@
 # All events relating to Hans and Admin
+# Look into reworking all of the events by starting from scratch
+# Possibly rethink the approach for Hans
 
 namespace = hans
 namespace = admin
@@ -19,12 +21,13 @@ namespace = admin
 
 
 # Strange Pulse - On_Action version
-event = {
+ship_event = {
 	id = hans.1
 	title = hans.1.name
 	desc = hans.1.desc
 	is_triggered_only = yes
-	picture = GFX_evt_alien_ruins	
+	picture = GFX_evt_alien_ruins
+	location = from	
 	fire_only_once = yes
 
 	trigger = {
@@ -32,7 +35,7 @@ event = {
 			is_ai = no
 		}
 		NOT = { has_global_flag = farc_hans_started }
-		has_planet_flag = farc_hans_planet
+		from = { has_planet_flag = farc_hans_planet }
 	}
 
 	immediate = {
@@ -45,32 +48,12 @@ event = {
 			hidden_effect = {
 				start_situation = {
 					type = farc_situation_energy_pulse
-					target = root
+					target = from
 				}
 			}
 		}
 	}
 }
-
-# # Strange Pulse
-# country_event = {
-# 	id = hans.1
-# 	title = hans.1.name
-# 	desc = hans.1.desc
-# 	is_triggered_only = yes
-# 	picture = GFX_evt_alien_ruins
-# 	fire_only_once = yes
-
-# 	option = {
-# 		name = hans.1.a # Investigate immediately!
-# 		hidden_effect = { 
-# 			start_situation = {
-# 				type = farc_situation_energy_pulse
-# 				target = root
-# 			} 
-# 		}
-# 	}
-# }
 
 # Triangulating the Pulse hans.2
 situation_event = {
@@ -171,19 +154,22 @@ country_event = { # Hans Leader Recruitment Event
 			NAME = NAME_hans
 			LEVEL = 4
 			GENDER = indeterminable
-			IMMORTAL = no
+			IMMORTAL = yes
 			ETHIC = authoritarian
 			DESC = hans_leader_desc
 			CATCH_PHRASE = hans_leader_catch_phrase
 		}
 		last_created_leader = {
 			add_trait = subclass_scientist_councilor
-			add_trait = leader_trait_xeno_cataloger
-			add_trait = leader_trait_carefree_2
-			add_trait = leader_trait_roamer_2
+			add_trait = leader_trait_midas_touch
+			add_trait = leader_trait_sapient_AI_assistant
 			add_trait = leader_trait_paranoid_2
 			add_trait = leader_trait_expertise_archaeostudies_3
-			set_age = 25
+			add_trait = leader_trait_psionic
+			add_trait = trait_ruler_champion_of_the_people_1
+			add_trait = leader_trait_scrapper
+			add_trait = leader_trait_volatile
+			set_age = 2347
 		}
 	}
 
@@ -227,7 +213,7 @@ country_event = { # Hans Leader Recruitment Event
 		tag = dismiss_leader
 		custom_tooltip = hans.7.dismiss.tooltip
 		hidden_effect = {
-			country_event = { id = hans.8 days = 60 }
+			#country_event = { id = hans.8 days = 60 }
 		}
 	}
 
@@ -238,75 +224,77 @@ country_event = { # Hans Leader Recruitment Event
 		hidden_effect = {
 		 ethic_leader_hire_effect = {
 			GLOBAL_EVENT_TARGET = renowned_authoritarian2}
-		 country_event = { id = hans.9 days = 60 random = 90 }	
+		 #country_event = { id = hans.9 days = 60 random = 90 }	
 		 #country_event = { id = admin.1 days = 60 random = 480 }
 		}
 		
 	}
 }
 
-# Fate of Hans if dismissed
-country_event = {
-	id = hans.8
-	title = hans.8.name
-	desc = hans.8.desc
-	is_triggered_only = yes
-	fire_only_once = yes
+# Fate of Hans if dismissed - Pending rework
+# country_event = {
+# 	id = hans.8
+# 	title = hans.8.name
+# 	desc = hans.8.desc
+# 	is_triggered_only = yes
+# 	fire_only_once = yes
 
-	picture = GFX_evt_alien_segregation
+# 	picture = GFX_evt_alien_segregation
 
-	option = { # leave him be
-		name = hans.8.a
-		add_resource = {
-			unity = 1000
-			energy = 1000
-		}
-	}
+# 	option = { # leave him be
+# 		name = hans.8.a
+# 		add_resource = {
+# 			unity = 1000
+# 			energy = 1000
+# 		}
+# 	}
 
-	option = { # Exploit Hans
-		name = hans.8.b
-		add_resource = {
-			society_research = 15000
-			influence = 50
-		}
-	}
-}
+# 	option = { # Exploit Hans
+# 		name = hans.8.b
+# 		add_resource = {
+# 			society_research = 15000
+# 			influence = 50
+# 		}
+# 	}
+# }
 
-# Start the Hans' opinion and influence situations
- country_event = {
- 	id = hans.9
- 	title = hans.9.name
- 	desc = hans.9.desc # Describes Hans cementing himself into your empire
- 	is_triggered_only = yes
- 	picture = GFX_evt_mercenary_enclave
- 	fire_only_once = yes
- 	option = {
- 		name = hans.9.a # Keep an eye on him
-		custom_tooltip = hans.9.tooltip
- 		hidden_effect = { 
- 			start_situation = {
- 				type = farc_situation_hans_opinion
- 				target = root
- 			}
-			start_situation = {
-				type = farc_situation_hans_influence
-				target = root
-			} 
- 		}
- 	}
- }
+# Prereq situations being reworked at a later date
 
- situation_event = { # Temp event for causing the coup?
-	id = hans.10
-	title = hans.10.name
-	desc = hans.10.desc
-	is_triggered_only = yes
-	picture = GFX_evt_legendary_leader
-	fire_only_once = yes
-	option = {
-		name = hans.10.a # Less than ideal... will make the nation a dictator and install Hans as ruler
-	}
- }
+# # Start the Hans' opinion and influence situations
+#  country_event = {
+#  	id = hans.9
+#  	title = hans.9.name # Need a new name
+#  	desc = hans.9.desc # Describes Hans cementing himself into your empire
+#  	is_triggered_only = yes
+#  	picture = GFX_evt_mercenary_enclave
+#  	fire_only_once = yes
+#  	option = {
+#  		name = hans.9.a # Keep an eye on him
+# 		custom_tooltip = hans.9.tooltip
+#  		hidden_effect = { 
+#  			start_situation = {
+#  				type = farc_situation_hans_opinion
+#  				target = root
+#  			}
+# 			start_situation = {
+# 				type = farc_situation_hans_influence
+# 				target = root
+# 			} 
+#  		}
+#  	}
+#  }
+
+#  situation_event = { # Temp event for causing the coup?
+# 	id = hans.10
+# 	title = hans.10.name
+# 	desc = hans.10.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_evt_legendary_leader
+# 	fire_only_once = yes
+# 	option = {
+# 		name = hans.10.a # Less than ideal... will make the nation a dictator and install Hans as ruler
+# 	}
+#  }
 
 
 #  country_event = { # Admin Leader Recruitment Event

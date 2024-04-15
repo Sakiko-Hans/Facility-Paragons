@@ -1,3 +1,4 @@
+# Gamestart events require an on_action to be fired
 
 namespace = farc_gamestart
 
@@ -20,7 +21,6 @@ event = {
 					OR = {
 						is_planet_class = pc_barren_cold
 						is_planet_class = pc_frozen
-						is_planet_class = pc_barren
 					}
 					NOR = {
 						has_deposit = d_nanites_deposit
@@ -33,7 +33,7 @@ event = {
 				100 = {
 					set_planet_flag = farc_hans_planet
 				}
-				20 = {}
+				15 = {}
 			}
 			}
 		}

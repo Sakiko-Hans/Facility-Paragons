@@ -27,7 +27,7 @@ farc_situation_energy_pulse = {
 
 	approach = { # Slow approach
 		name = farc_approach_investigate_minor
-		icon = GFX_situation_approach_research
+		icon = GFX_situation_approach_astral
 		icon_background = GFX_situation_approach_bg_yellow
 		default = yes
 		on_select = {
@@ -51,8 +51,8 @@ farc_situation_energy_pulse = {
 
 	approach = { # Fast Approach
 		name = farc_approach_investigate_major
-		icon = GFX_situation_approach_fleet
-		icon_background = GFX_situation_approach_bg_yellow
+		icon = GFX_situation_approach_research
+		icon_background = GFX_situation_approach_bg_green
 		on_select = {
 			custom_tooltip = approach_outcome_tooltip 
 		}
@@ -75,7 +75,7 @@ farc_situation_energy_pulse = {
 
 	approach = { # Very Slow Approach
 		name = farc_approach_investigate_delay 
-		icon = GFX_situation_approach_shrug
+		icon = GFX_situation_approach_handshake
 		icon_background = GFX_situation_approach_bg_yellow
 		on_select = {
 			custom_tooltip = approach_outcome_tooltip
@@ -93,8 +93,8 @@ farc_situation_energy_pulse = {
 
 	approach = { # Ignore
 	name = farc_approach_investigate_none
-	icon = GFX_situation_approach_influence
-	icon_background = GFX_situation_approach_bg_yellow
+	icon = GFX_situation_approach_shrug
+	icon_background = GFX_situation_approach_bg_red
 	on_select = {
 		custom_tooltip = approach_outcome_tooltip
 	}
@@ -166,152 +166,170 @@ farc_situation_energy_pulse = {
 
 }
 
-farc_situation_hans_opinion = {
-  	picture = GFX_evt_friendly_enlightenment
-  	start_value = 90
-  	progress_direction = bidirectional
-  	complete_icon_frame = GFX_situation_outcome_frame_blue
-  	complete_icon = GFX_situation_outcome_unknown
-  	fail_icon_frame = GFX_situation_outcome_frame_red
-  	fail_icon = GFX_situation_outcome_unknown
+# Will look into these later
+
+# farc_situation_hans_opinion = {
+#   	picture = GFX_evt_friendly_enlightenment
+#   	start_value = 90
+#   	progress_direction = bidirectional
+#   	complete_icon_frame = GFX_situation_outcome_frame_blue
+#   	complete_icon = GFX_situation_outcome_unknown
+#   	fail_icon_frame = GFX_situation_outcome_frame_red
+#   	fail_icon = GFX_situation_outcome_unknown
 	
-  	approach = {
-  		name = farc_approach_observe
-  		icon = GFX_situation_approach_amenities
-  		icon_background = GFX_situation_approach_bg_yellow
-  		on_select = {
-  			custom_tooltip = approach_outcome_tooltip
-  		}
- 		default = yes
-  	}
+#   	approach = {
+#   		name = farc_approach_observe
+#   		icon = GFX_situation_approach_amenities
+#   		icon_background = GFX_situation_approach_bg_yellow
+#   		on_select = {
+#   			custom_tooltip = approach_outcome_tooltip
+#   		}
+#  		default = yes
+#   	}
 
- 	stages = {
-	stage_5 = { # left - Abysmal opinion
-		icon = GFX_situation_stage_5
-		icon_background = GFX_situation_stage_frame_red
-		end = 20	
-	}	
-	stage_4 = { # left - negative opinion
-		icon = GFX_situation_stage_4
-		icon_background = GFX_situation_stage_frame_red
-		end = 40	
-	}	
-	stage_3 = { # left - discontentment
-		icon = GFX_situation_stage_3
-		icon_background = GFX_situation_stage_frame_red
-		end = 60	
-	}	
- 	stage_2 = { # left - irritated
- 	icon = GFX_situation_stage_2
- 	icon_background = GFX_situation_stage_frame_red
- 	end = 80	
- 	}	
- 	stage_1 = { # centre - neutral
- 	icon = GFX_situation_stage_1
- 	icon_background = GFX_situation_stage_frame_blue
- 	end = 100
- 	}
- 	stage_2_alt = { # right - slightly positive
- 		icon = GFX_situation_stage_2
- 		icon_background = GFX_situation_stage_frame_green
- 		end = 120
- 	}
-	stage_3_alt = { # right - positive
-	 icon = GFX_situation_stage_3
-	 icon_background = GFX_situation_stage_frame_green
-	 end = 140
- 	}
-	stage_4_alt = { # right - mostly positive
-	 icon = GFX_situation_stage_4
-	 icon_background = GFX_situation_stage_frame_green
-	 end = 160
- 	}
-	stage_5_alt = { # right - Max opinion reached
-	 icon = GFX_situation_stage_5
-	 icon_background = GFX_situation_stage_frame_green
-	 end = 180
- 	}
- }
-}
+#  	stages = {
+# 	stage_5 = { # left - Abysmal opinion
+# 		icon = GFX_situation_stage_5
+# 		icon_background = GFX_situation_stage_frame_red
+# 		end = 20	
+# 	}	
+# 	stage_4 = { # left - negative opinion
+# 		icon = GFX_situation_stage_4
+# 		icon_background = GFX_situation_stage_frame_red
+# 		end = 40	
+# 	}	
+# 	stage_3 = { # left - discontentment
+# 		icon = GFX_situation_stage_3
+# 		icon_background = GFX_situation_stage_frame_red
+# 		end = 60	
+# 	}	
+#  	stage_2 = { # left - irritated
+#  	icon = GFX_situation_stage_2
+#  	icon_background = GFX_situation_stage_frame_red
+#  	end = 80	
+#  	}	
+#  	stage_1 = { # centre - neutral
+#  	icon = GFX_situation_stage_1
+#  	icon_background = GFX_situation_stage_frame_blue
+#  	end = 100
+#  	}
+#  	stage_2_alt = { # right - slightly positive
+#  		icon = GFX_situation_stage_2
+#  		icon_background = GFX_situation_stage_frame_green
+#  		end = 120
+#  	}
+# 	stage_3_alt = { # right - positive
+# 	 icon = GFX_situation_stage_3
+# 	 icon_background = GFX_situation_stage_frame_green
+# 	 end = 140
+#  	}
+# 	stage_4_alt = { # right - mostly positive
+# 	 icon = GFX_situation_stage_4
+# 	 icon_background = GFX_situation_stage_frame_green
+# 	 end = 160
+#  	}
+# 	stage_5_alt = { # right - Max opinion reached
+# 	 icon = GFX_situation_stage_5
+# 	 icon_background = GFX_situation_stage_frame_green
+# 	 end = 180
+#  	}
+#  }
+# }
 
-farc_situation_hans_influence = { 
- 	picture = GFX_evt_legendary_leader
- 	start_value = 0
-	monthly_progress = {
-		base = 0.05
-	} 
- 	progress_direction = monodirectional
- 	complete_icon_frame = GFX_situation_outcome_frame_blue
- 	complete_icon = GFX_situation_outcome_unknown
-	stages = {
-		stage_1 = { # Virtually no influence, no bonuses, no maluses
-			icon = GFX_situation_stage_1
-			icon_background = GFX_situation_stage_frame_blue
-			end = 5
-		}
-	}
+# farc_situation_hans_influence = { 
+#  	picture = GFX_evt_legendary_leader
+#  	start_value = 0
+# 	monthly_progress = {
+# 		base = 0.05
+# 		modifier = {
+# 			current_situation_approach = farc_debug_speed
+# 			add = 5
+# 		}
+# 	} 
+#  	progress_direction = monodirectional
+#  	complete_icon_frame = GFX_situation_outcome_frame_blue
+#  	complete_icon = GFX_situation_outcome_unknown
 
-	stages = {
-		stage_2 = { # Low influence, modifiers to research, agenda speed if on the council, ship build cost, ship build speed,
-			icon = GFX_situation_stage_2
-			icon_background = GFX_situation_stage_frame_blue
-			end = 35
-			modifier = {
-				all_technology_research_speed = 0.025
-			}
-		}
+# 	approach = {
+# 		name = farc_debug_speed
+# 		icon = GFX_situation_approach_amenities
+# 		icon_background = GFX_situation_approach_bg_red
+# 	}
+# 	stages = {
+# 		stage_1 = { # Virtually no influence, no bonuses, no maluses
+# 			icon = GFX_situation_stage_1
+# 			icon_background = GFX_situation_stage_frame_blue
+# 			end = 5
+# 		}
+# 	}
 
-	}
+# 	stages = {
+# 		stage_2 = { # Low influence, modifiers to research, agenda speed if on the council, ship build cost, ship build speed,
+# 			icon = GFX_situation_stage_2
+# 			icon_background = GFX_situation_stage_frame_blue
+# 			end = 35
+# 			modifier = {
+# 				all_technology_research_speed = 0.025
+# 				council_agenda_progress_speed = 0.025
+# 			}
+# 		}
 
-	stages = {
-		stage_3 = { # Moderate influence
-			icon = GFX_situation_stage_3
-			icon_background = GFX_situation_stage_frame_blue
-			end = 75
-			modifier = {
-				all_technology_research_speed = 0.05
-			}
-		}
+# 	}
 
-	}
+# 	stages = {
+# 		stage_3 = { # Moderate influence
+# 			icon = GFX_situation_stage_3
+# 			icon_background = GFX_situation_stage_frame_blue
+# 			end = 75
+# 			modifier = {
+# 				all_technology_research_speed = 0.05
+# 				council_agenda_progress_speed = 0.05
+# 			}
+# 		}
 
-	stages = {
-		stage_4 = { # High influence
-			icon = GFX_situation_stage_4
-			icon_background = GFX_situation_stage_frame_blue
-			end = 100
-			modifier = {
-				all_technology_research_speed = 0.10
-			}
-		}
+# 	}
 
-	}
+# 	stages = {
+# 		stage_4 = { # High influence
+# 			icon = GFX_situation_stage_4
+# 			icon_background = GFX_situation_stage_frame_blue
+# 			end = 100
+# 			modifier = {
+# 				all_technology_research_speed = 0.10
+# 				council_agenda_progress_speed = 0.10
+# 				ship_base_speed_mult = -0.05
+# 			}
+# 		}
 
-	stages = {
-		stage_5 = { # Very high influence
-			icon = GFX_situation_stage_5
-			icon_background = GFX_situation_stage_frame_blue
-			end = 130
-			modifier = {
-				all_technology_research_speed = 0.15
-			}
-		}
+# 	}
 
-	}
+# 	stages = {
+# 		stage_5 = { # Very high influence
+# 			icon = GFX_situation_stage_5
+# 			icon_background = GFX_situation_stage_frame_blue
+# 			end = 130
+# 			modifier = {
+# 				all_technology_research_speed = 0.15
+# 				council_agenda_progress_speed = 0.15
+# 			}
+# 		}
 
-	stages = {
-		stage_6 = { # Extreme influence, begin coup situation
-			icon = GFX_situation_stage_6
-			icon_background = GFX_situation_stage_frame_blue
-			end = 150
-			modifier = {
-				all_technology_research_speed = 0.25
-			}
-		}
-	}
+# 	}
 
-	on_progress_complete = {
-		custom_tooltip = farc_influence_end
-		hidden_effect = {}
-	}
- }
+# 	stages = {
+# 		stage_6 = { # Extreme influence, begin coup situation
+# 			icon = GFX_situation_stage_6
+# 			icon_background = GFX_situation_stage_frame_blue
+# 			end = 150
+# 			modifier = {
+# 				all_technology_research_speed = 0.25
+# 				council_agenda_progress_speed = 0.25
+# 			}
+# 		}
+# 	}
+
+# 	on_progress_complete = {
+# 		custom_tooltip = farc_influence_end
+# 		hidden_effect = {}
+# 	}
+#  }
