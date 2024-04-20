@@ -5,5 +5,5 @@ tags={
 	"Events"
 }
 name="Hans_paragon"
-supported_version="3.11.2"
+supported_version="3.11.*"
 remote_file_id="3205747058"

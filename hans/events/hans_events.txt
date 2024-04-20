@@ -6,20 +6,6 @@ namespace = hans
 namespace = admin
 
 
-# Gateway
-#  country_event = {
-#  	id = hans.11111
-#  	title = primer
-#  	fire_only_once = yes
-#  	hide_window = yes
-#  	mean_time_to_happen = { days = 1 }
-
-#  	immediate = {
-#  		country_event = { id = hans.1 days = 240 random = 360 }
-#  	}
-# }
-
-
 # Strange Pulse - On_Action version
 ship_event = {
 	id = hans.1
@@ -104,12 +90,6 @@ situation_event = {
 
 	option = {
 		name = hans.5.a # Most fascinating
-			owner = {
-				add_resource = {
-					engineering_research = 5000
-					society_research = 1500
-				} 
-			}
 	}
 }
 
@@ -177,6 +157,7 @@ country_event = { # Hans Leader Recruitment Event
 		portrait = event_target:ethic_leader
 		room = ethic_spaceship_room
 	}
+	picture = GFX_leader_recruitment_bg_renowned
 
 	option = {
 		name = hans.7.a
